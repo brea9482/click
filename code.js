@@ -32,7 +32,7 @@ $('.container').on('click', '.circle', function() {
 
   if (clickedColor == "rgb(255, 0, 0)") {
     score++;
-    $('#score').html("Your Score: " + score);
+    $('#score').html(score);
   }
   else {
     clearInterval(game);
@@ -46,7 +46,7 @@ $('.container').on('click', '.circle', function() {
   if (score == 5) {
     winningTime = Date.now()
     reactionTime = (winningTime - createdTime) / 1000;
-    $('#winning-time').html("Your time: " + reactionTime);
+    $('#winning-time').html("Your time: " + reactionTime + 's');
     clearInterval(game);
 
     $('#win-result').html('You win! Click reset to play again!');
