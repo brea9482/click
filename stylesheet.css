@@ -4,6 +4,26 @@
   width: 1140px;
 }
 
+.win-message {
+  background-color: rgba(166, 246, 177, 0.5);
+  border-radius: 10px;
+  display: none;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.loss-message {
+  background-color: rgba(250, 169, 162, 0.5);
+  border-radius: 10px;
+  display: none;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+hr {
+  margin-top: 3px !important;
+}
+
 .well {
   margin-left: 13px;
   text-align: center;

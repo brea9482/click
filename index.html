@@ -15,7 +15,13 @@
     <p class="lead">Click on 5 red circles as quickly as you can. If
       you click on another color, you lose!
     </p>
-    <div class="row">
+    <div class="row-fluid win-message">
+      <div id="win-result" class="col-xs-4 center-block" style="float: none;"></div>
+    </div>
+    <div class="row-fluid loss-message">
+      <div id="loss-result" class="col-xs-4 center-block" style="float: none;"></div>
+    </div>
+    <div class="row bar">
       <div class="col-sm-4 well">
         <p>Your Score: <span id="score">0</p>
         <p id="winning-time"></p>

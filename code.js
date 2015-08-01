@@ -1,9 +1,9 @@
-var colors = ["red","lightblue","lightgreen","yellow","purple","orange"];
+var colors = ["red","lightblue","lightgreen","yellow","purple","orange","darkblue","gray"];
 var color = ""
 var score = 0
 
 function makeCircle() {
-  for (i = 0; i < 50; i++) {
+  for (i = 0; i < 45; i++) {
 
     color = colors[Math.floor(Math.random()*colors.length)];
     var top = Math.random() * 410;
@@ -37,23 +37,10 @@ $('.container').on('click', '.circle', function() {
   else {
     clearInterval(game);
 
-    answer = prompt("You Lose!! Would you like to play again? (Y/N)");
-
-    while (answer != "Y" || answer != "N") {
-      if (answer == "Y") {
-        location.reload();
-        break;
-      }
-      else if (answer == "N") {
-        alert("Thanks for playing!");
-        $('#stop').fadeOut();
-        $('#reset').fadeIn();
-        break;
-      }
-      else {
-        answer = prompt("Please enter Y or N");
-      }
-    }
+    $('#loss-result').html('You lose!! Click restart to play again!');
+    $('.loss-message').fadeIn();
+    $('#stop').hide();
+    $('#reset').fadeIn();
   }
 
   if (score == 5) {
@@ -61,23 +48,11 @@ $('.container').on('click', '.circle', function() {
     reactionTime = (winningTime - createdTime) / 1000;
     $('#winning-time').html("Your time: " + reactionTime);
     clearInterval(game);
-    answer = prompt("You Win!! Would you like to play again? (Y/N)");
 
-    while (answer != "Y" || answer != "N") {
-      if (answer == "Y") {
-        location.reload();
-        break;
-      }
-      else if (answer == "N") {
-        alert("Thanks for playing!");
-        $('#stop').fadeOut();
-        $('#reset').fadeIn();
-        break;
-      }
-      else {
-        answer = prompt("Please enter Y or N");
-      }
-    }
+    $('#win-result').html('You win! Click restart to play again!');
+    $('.win-message').fadeIn();
+    $('#stop').hide();
+    $('#reset').fadeIn();
   }
 
   $(this).hide();
@@ -87,7 +62,7 @@ $('#start').click( function() {
   createdTime = Date.now();
   game = setInterval(function() {
     makeCircle();
-  }, 800);
+  }, 300);
   $(this).hide();
   $('#stop').fadeIn();
 });
@@ -102,7 +77,7 @@ $('#stop').click( function() {
 $('#restart').click( function() {
   game = setInterval(function() {
     makeCircle();
-  }, 800);
+  }, 300);
   $(this).hide();
   $('#reset').hide();
   $('#stop').fadeIn();
