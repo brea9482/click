@@ -49,7 +49,7 @@ $('.container').on('click', '.circle', function() {
     $('#winning-time').html("Your time: " + reactionTime);
     clearInterval(game);
 
-    $('#win-result').html('You win! Click restart to play again!');
+    $('#win-result').html('You win! Click reset to play again!');
     $('.win-message').fadeIn();
     $('#stop').hide();
     $('#reset').fadeIn();
