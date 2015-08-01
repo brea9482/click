@@ -37,7 +37,7 @@ $('.container').on('click', '.circle', function() {
   else {
     clearInterval(game);
 
-    $('#loss-result').html('You lose!! Click restart to play again!');
+    $('#loss-result').html('You lose!! Click reset to play again!');
     $('.loss-message').fadeIn();
     $('#stop').hide();
     $('#reset').fadeIn();
