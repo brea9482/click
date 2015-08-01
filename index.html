@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+  <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+
+  <title>GAME</title>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Test your reaction time!</h1>
+    <p class="lead">Click on 5 red circles as quickly as you can. If
+      you click on another color, you lose!
+    </p>
+    <div class="row">
+      <div class="col-sm-4 well">
+        <p>Your Score: <span id="score">0</p>
+        <p id="winning-time"></p>
+      </div>
+      <div class="col-sm-3 btn btn-default" id="start">
+        Start Game!
+      </div>
+      <div class="col-sm-3 btn btn-default" id="restart">
+        Restart Game!
+      </div>      <div class="col-sm-3 btn btn-default" id="stop">
+        Stop Game!
+      </div>
+      <div class="col-sm-3 btn btn-default" id="reset">
+        Reset Game
+      </div>
+    </div>
+    <hr>
+    <div id="game-space"></div>
+  </div>
+
+  <script src="code.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

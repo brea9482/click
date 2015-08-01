@@ -1,0 +1,38 @@
+#game-space {
+  border: 1px solid lightgray;
+  height: 450px;
+  width: 1140px;
+}
+
+.well {
+  margin-left: 13px;
+  text-align: center;
+}
+
+.btn {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#start {
+  background-color: orange;
+  color: white;
+}
+
+#restart {
+  background-color: orange;
+  color: white;
+  display: none;
+}
+
+#stop {
+  background-color: #fe0101;
+  color: white;
+  display: none;
+}
+
+#reset {
+  background-color: #17bc01;
+  color: white;
+  display: none;
+}
